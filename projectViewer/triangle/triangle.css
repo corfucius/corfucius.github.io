@@ -1,0 +1,64 @@
+main {
+	justify-content: center;
+	align-items: center;
+	background-color: #25A9FC;
+	width: 100%;
+	height: 60em;
+	-webkit-perspective: 1500px;
+	-webkit-perspective-origin: 50% -240px;
+	padding: 10%;
+}
+
+div {
+	display: block;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	transform-style: preserve-3d;
+}
+
+figure {
+	transform-origin: 50% 50% 0;
+	transform-style: preserve-3d;
+	display: block;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background-color: #60c2ef;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+}
+
+#blue {
+	
+	transform: rotateY(-45deg) rotateX(48deg) translateZ(57px);
+	clip-path: polygon(50% 33%, 0% 100%, 100% 100%);
+
+}
+
+#red {
+	clip-path: polygon(50% 33%, 0% 100%, 100% 100%);
+	transform: rotateY(45deg) rotateX(48deg) translateZ(57px);
+}
+
+#dragon {
+	clip-path: polygon(50% 33%, 0% 100%, 100% 100%);
+	transform: rotateY(225deg) rotateX(48deg) translateZ(57px);
+}
+
+#rose {
+	transform: rotateY(135deg) rotateX(48deg) translateZ(57px);
+	clip-path: polygon(50% 33%, 0% 100%, 100% 100%);
+}
+
+@-webkit-keyframes rotate {
+	0% {-webkit-transform: rotateY();}
+	100% { -webkit-transform: rotateY(-360deg); }
+}
+
+#container:hover {
+	-webkit-animation: rotate 10s infinite linear;
+}

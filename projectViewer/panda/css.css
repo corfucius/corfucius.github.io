@@ -1,0 +1,171 @@
+body{
+  background: #25A9FC;
+}
+.box{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  width: 600px;
+  height: 420px;
+  background: none;
+}
+.head{
+  position: absolute;
+  top:16.5%;
+  left: 25%;
+  width: 50%;
+  height: 67%;
+  background: white;
+  border-radius: 45%;
+}
+.head-copy{
+  width: 100%;
+  height: 95%;
+  position: absolute;
+  background: white;
+  border-radius: 55%;
+  z-index: 3;
+}
+.ear-left{
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  left: -15%;
+  top: 3%;
+  background: black;
+  border-radius: 80%;
+  z-index: 1; 
+  transform: rotateZ(45deg);
+
+
+}
+.ear-right{
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  right: -15%;
+  top: 5%;
+  background: black;
+  border-radius: 90%;
+  z-index: 1; 
+  transform: rotateZ(-45deg);
+}
+.inner-ear{
+  position: absolute;
+  border-radius: 50%;
+  width: 80%;
+  height: 50%;
+  top: 10%;
+  left: 10%;
+  background: black;
+}
+.eye-left{
+  position: absolute;
+  background: black;
+  width: 20%;
+  height: 35%;
+  top: 30%;
+  left: 20%;
+  border-radius: 45%;
+  z-index: 3;
+  transform: rotateZ(25deg);
+
+}
+.eye-right{
+  position: absolute;
+  background: black;
+  width: 20%;
+  height: 35%;
+  top: 30%;
+  right: 20%;
+  border-radius: 45%;
+  z-index: 3;
+  transform: rotateZ(-20deg);
+}
+.pupil{
+  position: absolute;
+  width: 28%;
+  height: 25%;
+  top: 35%;
+  left: 15%;
+  border-radius: 50%;
+  background: grey;
+}
+
+.nose{
+  position: absolute;
+  background: black;
+  width: 25%;
+  height: 20%;
+  left: 37%;
+  top: 70%;
+  border-radius: 50px;
+  z-index: 4;
+  clip-path: polygon(59% 98%, 52% 47%, 99% 3%, 0 3%, 44% 48%);
+
+  /*clip-path: polygon(64% 97%, 4% 6%, 97% 1%);*/
+  
+}
+
+
+.earLeftMod {
+  position: absolute;
+  width: 80%; 
+  height: 50%;
+  left: -15%;
+  top: 3%;
+  background: black;
+  border-radius: 80%;
+  z-index: 1; 
+  transform: rotateZ(90deg);
+  transition: 1s;
+}
+
+.ear-right:hover{
+ transform: rotateZ(-65deg);
+ transition: 1s;
+}
+
+/*
+  .pupilTwo{
+  position: absolute;
+  width: 28%;
+  height: 25%;
+  top: 35%;
+  left: 15%;
+  border-radius: 50%;
+  background: grey;
+} 
+.pupilMod {
+  position: absolute;
+  width: 28%;
+  height: 25%;
+  top: 35%;
+  left: 40%;
+  border-radius: 50%;
+  background: grey;
+  transition: 1s;
+  transform: rotateZ(-65deg);
+ 
+} 
+.pupil:hover{
+  position: absolute;
+  width: 28%;
+  height: 25%;
+  top: 35%;
+  left: 40%;
+  border-radius: 50%;
+  background: grey;
+}
+.pupil:hover{
+  position: absolute;
+  width: 28%;
+  height: 25%;
+  top: 35%;
+  left: 40%;
+  border-radius: 50%;
+  background: grey;
+}
+*/
+

@@ -1,0 +1,379 @@
+/*my variables */
+html {
+	--myBackground: rgba(171,149,90,0.7);
+	--myFooterColor: #130f0c;
+	--myFooterFont: #84531b;
+	--myPDFcolor: #525659;
+}
+
+/* Main div grid layout */
+
+#mainContent {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto auto;
+	font-family: Lucida Sans Unicode, Arial;
+    grid-gap: 0.25em;
+    margin: .5em;
+}
+ 
+#mainHeader {
+	background-color: var(--myBackground);
+	grid-column: 1/-1;
+	display: grid; 
+	grid-template-columns: auto 1fr auto;
+	grid-gap: 0.5em;
+	border-bottom: double;
+}
+
+/* Header Icons */
+#mainLogo {
+	margin: 1em;
+	height: 4em;
+	width:  auto;
+	padding: 0.5em;
+}
+
+#mainHamburger {
+	margin: 1em;
+	height: 4em;
+	width: 4em;
+	float:right;
+	padding: 0.5em;
+}
+
+/*Homepage h2 name layout */
+
+#homeMyName {
+	text-align: center;
+	margin: 1em;
+	font-size: smaller;
+}
+
+#homeMyName a {
+	font-size: 5vw;
+	text-decoration: none;
+	color: black;
+}
+
+
+/* Navigation Menu CSS */
+.navMenu a {
+	padding: .5em .5em .5em 2em;
+	text-decoration: none;
+	font-size: 1.5em;
+	color: var(--myFooterFont);
+	display: block;
+	transition: 0.3s;
+}
+
+.closeNav {
+	float: right;
+	padding: .5em;
+}
+
+.navMenu {
+	display: none;
+}
+
+.navMenuHover {
+	display: inline-block;
+	position: fixed;
+	height: 100%;
+	padding: 1em;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background-color: var(--myFooterColor);
+	overflow-x: hidden;
+	transition: 0.5s;
+	width: 30vw;
+}
+
+/* Homepage Background Pic and Div Layout */
+
+#mainHero {
+	background: url(../pictures/heroPic.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 45em; 
+	grid-column: 1/-1;
+	display: flex;
+}
+
+#heroText {
+	transform: translateY(10vh);
+	text-align: center;
+	justify-content: center;
+}
+
+/* Homepage Transparent Overlays */
+.leftArrow {
+	z-index: 1;
+	opacity: 0.2;
+	background-color: tan;
+	height: auto;
+	width: 100%;
+    float: left;
+    -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.rightArrow {
+	z-index: 1;
+	opacity: 0.2;
+	background-color: tan;
+	height: auto;
+	width: 100%;
+    float: right;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/*Homepage Footer */
+#mainFooter {
+	background-color: var(--myFooterColor);
+	grid-column: 1/-1;
+	height: auto;
+	font-family: Lucida Sans Unicode, Arial;
+	padding: 1vh;
+	text-align: center;
+	font-size: medium;
+	color: var(--myFooterFont);
+}
+
+.contactInfo a {
+	text-decoration: none;
+	color: var(--myFooterFont);
+}
+
+.comIcons {
+	height: 40px;
+	width: 40px;
+}
+
+/*from css.css for php header and footer */
+#aboutHeader {
+	background-color: var(--myFooterColor); 
+	grid-column: 1/-1;
+	font-family: Lucida Sans Unicode, Arial;
+	display: grid;
+	grid-template-columns: auto 40% auto;
+	grid-template-rows: auto 2fr auto;
+	grid-gap: 0.5em;
+	border-bottom: double;
+	color: var(--myPDFcolor);
+}
+
+#aboutFooter {
+	background-color: var(--myFooterColor);
+	grid-column: 1/-1;
+	grid-row: 4/-1;
+	height: auto;
+	font-family: Lucida Sans Unicode, Arial;
+	padding: 1vh;
+	text-align: center;
+	font-size: medium;
+	color: var(--myFooterFont);
+}
+
+#myName {
+	text-align: center;
+	margin: 1em;
+} 
+
+#myName a {
+	text-decoration: none;
+	font-size: 4vw;
+	color: white;
+	text-align: center;
+}
+
+/*Main Div on all Navigation Pages */
+.pagesContent {
+	display: grid;
+	height: 100%;
+	grid-column: 1/-1;
+	grid-row: 2/4;
+	margin-bottom: 5px;
+}
+
+/*About Me Page */
+#aboutMeStuff {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2em;
+}
+
+#aboutMeBlog {
+	text-indent: 8px;
+	padding: 0.5em;
+}
+
+#aboutMeBlog a {
+	text-decoration: none;
+	color: var(--myFooterFont);
+}
+
+#picOfMe {
+	height: 30em;
+	width: auto;
+}
+
+/* Experience Page */
+
+#experienceLayout {
+	display: grid;
+	grid-template-columns: auto 3fr;
+	font-family: Corbel, Consolas, Courier;
+	grid-gap: 2vw;
+	grid-column: 1/-1;
+	min-height: 50vh;
+
+}
+/*Containers for exp and education */
+.exRows {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-gap: 2px;
+	height: 20%;
+	width: 100%;
+}
+
+.edRows {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-row: 2/4;
+	grid-gap: 2px;
+	height: 20%;
+	width: 100%;
+}
+/*Layout for exp and ed headers */
+.header {
+	color: var(--myPDFcolor);
+}
+.headerSection {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	border-color: var(--myPDFcolor);
+	color: var(--myPDFcolor);
+	border-style: solid;
+	border-width: 3px;
+}
+
+.sectionHeadCenter h3 {
+	text-align: left;
+	margin-left: -1em;
+}
+
+/*Layout for the info in each skills box */
+span h3 {
+	text-align: left;
+	margin: 5px;
+}
+
+span p {
+	padding: 5px;
+	text-align: left;
+} 
+
+.skillSection {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 3px;
+}
+
+.infoLet {
+	display: grid;
+	padding: 0.5em;
+	grid-template-columns: auto auto;
+	text-align: left;
+	border-color: var(--myPDFcolor);
+	border-style: solid;
+	border-width: 3px;
+}
+
+.infoLeft {
+	background-color: var(--myPDFcolor);
+	color: white;
+}
+/*Layout for Resume and media query for Experience Page */
+
+#resume {
+	width: 45vw;
+	display: none;
+}
+
+#resLink {
+	color: var(--myPDFcolor);
+	display: block;
+	font-size: larger;
+}
+
+#resHead {
+	text-align: center;
+	color: var(--myPDFcolor);
+}
+
+@media (min-width:600px) {
+	#resume {
+		display: block;
+		width: 45vw;
+	}
+	#resLink {
+	display: none;
+	}
+	.edRows {
+		display: none;
+	}
+}
+
+/*Contact Page */
+#contactPage {
+	background-color: var(--myFooterColor);
+	grid-column: 1/-1;
+	min-width: 40vw;
+	min-height: 60vh;
+	font-family: Lucida Sans Unicode, Arial;
+	padding: 1vh;
+	text-align: center;
+	justify-content: center;
+	font-size: medium;
+	color: white;
+}
+
+#contactInfo {
+	font-size: larger;
+}
+
+#contactInfo a {
+	text-decoration: none;
+	color: var(--myFooterFont);
+}
+
+/* Links Page */
+
+.linksPage {
+	display: grid;
+	grid-column: 1/-1;
+	margin-bottom: 5px;
+	min-height: 60vh;
+	background-color: var(--myFooterColor);
+	color: white;
+	padding: 1em;
+}
+
+.linksPage label {
+	font-size: larger;
+}
+
+.links a {
+	text-decoration: none;
+	color: var(--myFooterFont);
+}
+
+ul {
+	list-style-type: none;
+}
+
+
