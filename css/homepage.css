@@ -220,6 +220,16 @@ html {
 	width: auto;
 }
 
+@media(max-width: 600px) {
+	#aboutMeStuff {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 2em;
+		margin: 20px 30px;
+		justify-content: center;
+	}
+}
+
 /* Experience Page */
 
 #experienceLayout {
