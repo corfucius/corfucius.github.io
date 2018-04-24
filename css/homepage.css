@@ -1,20 +1,29 @@
-/*my variables */
+/*my variables , rules for whole doc*/
 html {
 	--myBackground: rgba(171,149,90,0.7);
 	--myFooterColor: #130f0c;
 	--myFooterFont: #84531b;
 	--myPDFcolor: #525659;
+	--myShadow: 0 5px 5px rgba(104, 104, 104, 0.8); 
+	box-sizing: border-box;
+}
+
+body {
+	margin: 30px 20px;
+}
+
+img {
+	max-width: 100%;
 }
 
 /* Main div grid layout */
 
-#mainContent {
+#mainContent {   /*About and Exp page inheirit these values*/
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: auto auto auto;
 	font-family: Lucida Sans Unicode, Arial;
     grid-gap: 0.25em;
-    margin: .5em;
 }
  
 #mainHeader {
@@ -24,6 +33,7 @@ html {
 	grid-template-columns: auto 1fr auto;
 	grid-gap: 0.5em;
 	border-bottom: double;
+	box-shadow: var(--myShadow);
 }
 
 /* Header Icons */
@@ -48,6 +58,7 @@ html {
 	text-align: center;
 	margin: 1em;
 	font-size: smaller;
+	max-width: 100%;
 }
 
 #homeMyName a {
@@ -90,6 +101,41 @@ html {
 	width: 30vw;
 }
 
+/*Nav and Header Mobile View*/
+@media only screen and (max-width: 600px) {
+	.navMenuHover {
+		height: auto;
+		width: 100%;
+		background: rgba(18,14,11, 0.8);
+	}
+	.navMenu a {
+		color: whitesmoke;
+	}
+	#nameBox {
+		display: none;
+	}
+	#mainHeader {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
+	#aboutHeader {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
+	
+	#mainLogo {
+		padding: 0;
+		height: 3em;
+		
+	}
+	.mainHamburger {
+		height: 3em;
+		margin: 0;
+	}
+}
+
 /* Homepage Background Pic and Div Layout */
 
 #mainHero {
@@ -99,6 +145,36 @@ html {
 	height: 45em; 
 	grid-column: 1/-1;
 	display: flex;
+	box-shadow: var(--myShadow);
+}
+
+#mobileHero {
+	display: none;
+}
+
+/*Main Page Media Q's */
+@media only screen and (max-width: 600px) { 
+	#mainHero {
+		display: none;
+	}
+	#mobileHero {
+		display: grid;
+		background-color: var(--myBackground);
+		grid-column: 1/-1;
+		grid-row: 2/4;
+		padding: 1.5em;
+	}
+	
+	#mobilePic img{
+		display: block;
+		width: 75vw;
+		margin: 0 auto;
+		box-shadow: var(--myShadow);
+	}
+	#mobileText {
+		font-size: larger;
+		padding: 1em;
+	}
 }
 
 #heroText {
@@ -140,6 +216,7 @@ html {
 	text-align: center;
 	font-size: medium;
 	color: var(--myFooterFont);
+	box-shadow: var(--myShadow);
 }
 
 .contactInfo a {
@@ -158,11 +235,10 @@ html {
 	grid-column: 1/-1;
 	font-family: Lucida Sans Unicode, Arial;
 	display: grid;
-	grid-template-columns: auto 40% auto;
-	grid-template-rows: auto 2fr auto;
-	grid-gap: 0.5em;
+	grid-template-columns: auto 1fr auto;
 	border-bottom: double;
 	color: var(--myPDFcolor);
+	box-shadow: var(--myShadow);
 }
 
 #aboutFooter {
@@ -175,6 +251,7 @@ html {
 	text-align: center;
 	font-size: medium;
 	color: var(--myFooterFont);
+	box-shadow: var(--myShadow);
 }
 
 #myName {
@@ -198,7 +275,7 @@ html {
 	margin-bottom: 5px;
 }
 
-/*About Me Page */
+/*About Me Page */ 
 #aboutMeStuff {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -218,15 +295,25 @@ html {
 #picOfMe {
 	height: 30em;
 	width: auto;
+	box-shadow: var(--myShadow);
 }
 
+/*About Me Media Query   */
 @media(max-width: 600px) {
+	body {
+		margin: 5px;
+	}
 	#aboutMeStuff {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap: 2em;
-		margin: 20px 30px;
+		margin: 20px 10px;
 		justify-content: center;
+	}
+	#picOfMe {
+		height: 20em;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -236,11 +323,13 @@ html {
 	display: grid;
 	grid-template-columns: auto 3fr;
 	font-family: Corbel, Consolas, Courier;
-	grid-gap: 2vw;
+	grid-gap: 1em;
 	grid-column: 1/-1;
 	min-height: 50vh;
+	margin: 5px;
 
 }
+
 /*Containers for exp and education */
 .exRows {
 	display: grid;
@@ -261,7 +350,9 @@ html {
 /*Layout for exp and ed headers */
 .header {
 	color: var(--myPDFcolor);
+	box-shadow: var(--myShadow);
 }
+
 .headerSection {
 	display: grid;
 	grid-template-columns: auto auto auto;
@@ -269,6 +360,7 @@ html {
 	color: var(--myPDFcolor);
 	border-style: solid;
 	border-width: 3px;
+	box-shadow: var(--myShadow);
 }
 
 .sectionHeadCenter h3 {
@@ -277,6 +369,7 @@ html {
 }
 
 /*Layout for the info in each skills box */
+
 span h3 {
 	text-align: left;
 	margin: 5px;
@@ -301,6 +394,7 @@ span p {
 	border-color: var(--myPDFcolor);
 	border-style: solid;
 	border-width: 3px;
+	box-shadow: var(--myShadow);
 }
 
 .infoLeft {
@@ -314,10 +408,16 @@ span p {
 	display: none;
 }
 
+#resLinkHolder a {
+	text-align: center;
+	padding: .5em;
+	text-decoration: none;
+}
+
 #resLink {
 	color: var(--myPDFcolor);
 	display: block;
-	font-size: larger;
+	font-size: larger;	
 }
 
 #resHead {
@@ -325,6 +425,7 @@ span p {
 	color: var(--myPDFcolor);
 }
 
+/*Media Q's for Experience Page */
 @media (min-width:600px) {
 	#resume {
 		display: block;
@@ -335,6 +436,21 @@ span p {
 	}
 	.edRows {
 		display: none;
+	}
+}
+@media only screen and (max-width:600px) {
+	#experienceLayout {
+		margin: 1em;
+		grid-gap: .5em;
+	}
+	
+	.headerSection {
+		display: none;
+	}
+	.skillSection {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: .5em;
 	}
 }
 

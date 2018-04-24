@@ -37,7 +37,6 @@ img {
 	-webkit-transform: rotateY(-45deg) rotateX(48deg) translateZ(57px);
 	clip-path: polygon(50% 33%, 0% 100%, 100% 100%);
 	-webkit-clip-path: polygon(50% 33%, 0% 100%, 100% 100%);
-
 }
 
 #red {
