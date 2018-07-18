@@ -3,32 +3,6 @@ header {
   font-weight: bold;
 }
 
-#mobileDisclaimer {
-  display: none;
-}
-
-#tempMobilePanda {
-  display: none;
-}
-
-@media only screen and (max-width: 600px) {
-  #mobileDisclaimer {
-    display: block;
-    color: red;
-    padding: .5em;
-  }
-  #slideContainer {
-    display: none;
-  }
-  #tempMobilePanda {
-    display: block;
-    margin: 1em;
-  }
-  #tempMobilePanda img {
-    max-width: 100%;
-  }
-}
-
 #slideContainer {
   max-width: 40em;
   position: relative;
@@ -111,4 +85,11 @@ header {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+@media only screen and (max-width: 600px) {
+  #slideContainer {
+    min-width: 90vw;
+    min-height: 60vh;
+  }
 }
